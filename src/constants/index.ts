@@ -1,7 +1,7 @@
 import {
     mobile,
     backend,
-    creator,
+    fedeveloper,
     web,
     javascript,
     typescript,
@@ -46,7 +46,7 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "React",
       icon: mobile,
     },
     {
@@ -54,8 +54,8 @@ import {
       icon: backend,
     },
     {
-      title: "Content Creator",
-      icon: creator,
+      title: "Frontend Developer",
+      icon: fedeveloper,
     },
   ];
   
