@@ -20,21 +20,27 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import django from './tech/django.png';
+import sass from './tech/sass.png';
+import postgresql from './tech/postgresql.png';
+import python from './tech/python.png';
+import mysql from './tech/mysql.png';
 
 import shopify from "./company/shopify.png";
 import workana from "./company/workana.png"
 import coolset from "./company/coolset.png"
 
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import hushSunrise from "./hushSunrise.png";
+import OlderPortifolio from "./olderPortifolio.png";
 
 export {
   logo,
   backend,
   fedeveloper,
   mobile,
+  hushSunrise,
+  OlderPortifolio,
   web,
   github,
   menu,
@@ -42,6 +48,11 @@ export {
   css,
   docker,
   figma,
+  django,
+  mysql,
+  python,
+  sass,
+  postgresql,
   git,
   html,
   javascript,
@@ -55,7 +66,4 @@ export {
   threejs,
   shopify,
   workana,
-  carrent,
-  jobit,
-  tripguide,
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn, textVariant } from '../utils/motion';
 import { styles } from '../style';
@@ -12,19 +12,24 @@ type Tag = {
   color: string;
 };
 
-type ProjectCardProps = {
-  index: number;
+export type Project = {
   name: string;
-  description: string;
+  description: string | ReactNode;
   tags: Tag[];
   image: string;
   source_code_link: string;
+  features: string[];
 };
+
+interface ProjectCardProps extends Project {
+  index: number;
+}
 
 const ProjectCard = ({
   index,
   name,
   description,
+  features,
   tags,
   image,
   source_code_link,
@@ -40,11 +45,7 @@ const ProjectCard = ({
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
+          <img src={image} alt={name} className="w-full h-full rounded-2xl" />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, '_blank')}
@@ -60,7 +61,12 @@ const ProjectCard = ({
         </div>
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className=" mt-2 text-secondary text-[14px]">{description}</p>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <ul className="mt-2 list-disc text-secondary text-[14px]">
+            {features.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
@@ -87,14 +93,15 @@ const Works = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Although my portfolios may not entirely encompass the breadth of my
+          current knowledge, they serve as a testament to my growth and
+          expertise. Each project is accompanied by a concise description and
+          includes links to both the code repositories and live demos. These
+          projects showcase my ability to tackle complex problems, work with
+          diverse technologies, and effectively manage projects.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex justify-center md:justify-start flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
