@@ -1,0 +1,1 @@
+export type FadeInDirection = "left" | "right" | "up" | "down" | '';

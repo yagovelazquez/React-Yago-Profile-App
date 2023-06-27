@@ -1,6 +1,6 @@
-//@ts-nocheck
+import { FadeInDirection } from "./motion.types";
 
-export const textVariant = (delay) => {
+export const textVariant = (delay: number | undefined) => {
     return {
       hidden: {
         y: -50,
@@ -18,7 +18,7 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const fadeIn = (direction, type, delay, duration) => {
+  export const fadeIn = (direction: FadeInDirection, type: string, delay: number, duration: number) => {
     return {
       hidden: {
         x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
@@ -39,7 +39,7 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const zoomIn = (delay, duration) => {
+  export const zoomIn = (delay: number, duration: number) => {
     return {
       hidden: {
         scale: 0,
@@ -58,7 +58,7 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const slideIn = (direction, type, delay, duration) => {
+  export const slideIn = (direction: FadeInDirection, type: string, delay: number, duration: number) => {
     return {
       hidden: {
         x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
@@ -77,7 +77,7 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const staggerContainer = (staggerChildren, delayChildren) => {
+  export const staggerContainer = (staggerChildren: number | undefined, delayChildren: number | undefined) => {
     return {
       hidden: {},
       show: {
