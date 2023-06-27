@@ -21,10 +21,10 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import workana from "./company/workana.png"
+import coolset from "./company/coolset.png"
+
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -46,16 +46,15 @@ export {
   html,
   javascript,
   mongodb,
+  coolset,
   nodejs,
   reactjs,
   redux,
   tailwind,
   typescript,
   threejs,
-  meta,
   shopify,
-  starbucks,
-  tesla,
+  workana,
   carrent,
   jobit,
   tripguide,
