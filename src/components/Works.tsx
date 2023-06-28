@@ -19,6 +19,7 @@ export type Project = {
   image: string;
   source_code_link: string;
   features: string[];
+  website_code_link: string;
 };
 
 interface ProjectCardProps extends Project {
@@ -31,6 +32,7 @@ const ProjectCard = ({
   description,
   features,
   tags,
+  website_code_link,
   image,
   source_code_link,
 }: ProjectCardProps) => {
@@ -46,7 +48,7 @@ const ProjectCard = ({
       >
         <div className="relative w-full h-[230px]">
           <img src={image} alt={name} className="w-full h-full rounded-2xl" />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div onClick={() => window.open(website_code_link, '_blank')} className="cursor-pointer absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, '_blank')}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"

@@ -187,7 +187,8 @@ const projects = [
       },
     ],
     image: hushSunrise,
-    source_code_link: 'https://github.com/',
+    source_code_link: 'https://github.com/yagovelazquez/react-spa-app',
+    website_code_link: 'https://spontaneous-lollipop-7fa817.netlify.app/',
   },
   {
     name: 'Older Personal Website',
@@ -214,7 +215,8 @@ const projects = [
       },
     ],
     image: OlderPortifolio,
-    source_code_link: 'https://github.com/',
+    source_code_link: 'https://github.com/yagovelazquez/Personal-Website',
+    website_code_link: 'https://darling-gumption-3fe1d2.netlify.app/',
   },
 ];
 
