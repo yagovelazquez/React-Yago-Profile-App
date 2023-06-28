@@ -5,23 +5,15 @@ import {
   web,
   javascript,
   typescript,
-  html,
-  css,
   reactjs,
   nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
   workana,
   shopify,
   OlderPortifolio,
   hushSunrise,
   coolset,
-  python,
   django,
-  mysql,
-  postgresql,
+  python,
 } from '../assets';
 
 export const navLinks = [
@@ -64,24 +56,8 @@ const technologies = [
     icon: python,
   },
   {
-    name: 'DJANGO',
+    name: 'Django',
     icon: django,
-  },
-  {
-    name: 'MYSQL',
-    icon: mysql,
-  },
-  {
-    name: 'POSTGRESQL',
-    icon: postgresql,
-  },
-  {
-    name: 'HTML 5',
-    icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
   },
   {
     name: 'JavaScript',
@@ -98,22 +74,6 @@ const technologies = [
   {
     name: 'Node JS',
     icon: nodejs,
-  },
-  {
-    name: 'MongoDB',
-    icon: mongodb,
-  },
-  {
-    name: 'git',
-    icon: git,
-  },
-  {
-    name: 'figma',
-    icon: figma,
-  },
-  {
-    name: 'docker',
-    icon: docker,
   },
 ];
 
